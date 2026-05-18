@@ -13,41 +13,37 @@ export default function Home() {
     <Container>
       <Hero />
       <SectionTitle
-        preTitle="Nextly Benefits"
-        title=" Why should you use this landing page"
-      >
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        preTitle="DevOps Workflow Overview"
+        title=" CI/CD & Deployment Pipeline"
+      > This project demonstrates a complete DevOps workflow including Docker containerization, CI/CD automation using GitHub Actions, and deployment of a modern web application.
+        It focuses on automation, reproducible environments, and streamlined delivery pipelines.
       </SectionTitle>
 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
 
       <SectionTitle
-        preTitle="Watch a video"
-        title="Learn how to fullfil your needs"
+        preTitle=""
+        title="How the Deployment Works"
       >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+         This project follows a fully automated CI/CD pipeline 
+         including build, containerization, and deployment stages.
       </SectionTitle>
 
       <Video videoId="fZ0D0cnR88E" />
 
       <SectionTitle
-        preTitle="Testimonials"
-        title="Here's what our customers said"
+        preTitle=""
+        title="System Reliability & Automation"
       >
-        Testimonials is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        This project demonstrates real-world DevOps practices including
+        CI/CD automation, containerized deployments, and infrastructure consistency using Docker and GitHub Actions.
       </SectionTitle>
 
       <Testimonials />
 
       <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+
       </SectionTitle>
 
       <Faq />

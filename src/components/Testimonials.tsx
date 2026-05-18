@@ -10,48 +10,34 @@ export const Testimonials = () => {
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
-        <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
-            </p>
 
-            <Avatar
-              image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
-            />
+        {/* Card 1 */}
+        <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] transition-all duration-300">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 dark:bg-trueGray-800 px-14 py-14 rounded-2xl">
+            <p className="text-2xl leading-normal">
+              CI/CD pipeline implemented using GitHub Actions for automated build, test, and deployment of a containerized application.
+            </p>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
-            </p>
 
-            <Avatar
-              image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
-            />
+        {/* Card 2 */}
+        <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-600 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)] transition-all duration-300">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 dark:bg-trueGray-800 px-14 py-14 rounded-2xl">
+            <p className="text-2xl leading-normal">
+              Docker containerization ensures consistent environments across development, staging, and production systems.
+            </p>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve
-              seen. I would use this for anything.
-            </p>
 
-            <Avatar
-              image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
-            />
+        {/* Card 3 */}
+        <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] transition-all duration-300">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 dark:bg-trueGray-800 px-14 py-14 rounded-2xl">
+            <p className="text-2xl leading-normal">
+              Automated deployment workflow reduces manual intervention and improves reliability of application delivery.
+            </p>
           </div>
         </div>
+
       </div>
     </Container>
   );

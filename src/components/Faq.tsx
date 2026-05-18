@@ -8,20 +8,29 @@ export const Faq = () => {
   return (
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-        {faqdata.map((item, index) => (
-          <div key={item.question} className="mb-5">
+
+        {faqdata.map((item) => (
+          <div
+            key={item.question}
+            className="mb-5 relative group p-[1px] rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.6)] transition-all duration-300"
+          >
             <Disclosure>
               {({ open }) => (
                 <>
-                  <DisclosureButton className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-gray-800 rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-gray-200">
-                    <span>{item.question}</span>
+                  <DisclosureButton className="flex items-center justify-between w-full px-5 py-5 text-left text-gray-900 dark:text-gray-100 rounded-2xl bg-white/80 dark:bg-trueGray-900/80 backdrop-blur-md hover:bg-white dark:hover:bg-trueGray-800 transition-all duration-300">
+
+                    <span className="font-medium text-base md:text-lg">
+                      {item.question}
+                    </span>
+
                     <ChevronUpIcon
-                      className={`${
-                        open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-indigo-500`}
+                      className={`w-5 h-5 text-indigo-500 transition-transform duration-300 ${
+                        open ? "rotate-180 text-pink-400" : ""
+                      }`}
                     />
                   </DisclosureButton>
-                  <DisclosurePanel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
+
+                  <DisclosurePanel className="px-5 pt-4 pb-5 text-gray-600 dark:text-gray-300 bg-white/70 dark:bg-trueGray-900/70 backdrop-blur-md rounded-b-2xl">
                     {item.answer}
                   </DisclosurePanel>
                 </>
@@ -29,28 +38,31 @@ export const Faq = () => {
             </Disclosure>
           </div>
         ))}
+
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
-  },
-  {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
-  },
-  {
-    question: "What is your refund policy? ",
+    question: "What does this project demonstrate?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "This project demonstrates a complete DevOps workflow including Docker containerization, CI/CD automation using GitHub Actions, and deployment of a modern web application.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "How is CI/CD implemented in this project?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "CI/CD is implemented using GitHub Actions to automate build, test, and deployment processes whenever code is pushed to the repository.",
+  },
+  {
+    question: "Is Docker used in this project?",
+    answer:
+      "Yes, Docker is used to containerize the application, ensuring consistent environments across development, staging, and production.",
+  },
+  {
+    question: "Is this project cloud-ready?",
+    answer:
+      "Yes, the architecture is designed to be cloud-ready and can be deployed on platforms like AWS, Azure, or any container-supported environment.",
   },
 ];

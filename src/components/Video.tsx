@@ -35,12 +35,15 @@ export function Video({ videoId }: Readonly<VideoProps>) {
           </button>
         )}
         {playVideo && (
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${videoId}?controls=0&autoplay=1`}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          <video
             className="w-full h-full aspect-video"
-          ></iframe>
+            controls
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/video/DEVvideo.mp4" type="video/mp4" />
+          </video>
         )}
       </div>
     </Container>

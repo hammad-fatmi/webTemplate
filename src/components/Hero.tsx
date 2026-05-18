@@ -9,12 +9,11 @@ export const Hero = () => {
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
             <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              Free Landing Page Template for startups
+              Dockerized Web Application with CI/CD Deployment
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              Nextly is a free landing page & marketing website
-              template for startups and indie projects. Its built with
-              Next.js & TailwindCSS. And its completely open-source.
+              A DevOps project demonstrating Docker
+              containerization, GitHub Actions CI/CD automation, and deployment workflow for a modern web application.
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
@@ -23,10 +22,10 @@ export const Hero = () => {
                 target="_blank"
                 rel="noopener"
                 className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">
-                Download for Free
+                View Source Code
               </a>
               <a
-                href="https://github.com/web3templates/nextly-template/"
+                href="https://github.com/hammad-fatmi/webTemplate"
                 target="_blank"
                 rel="noopener"
                 className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
@@ -61,28 +60,90 @@ export const Hero = () => {
         </div>
       </Container>
       <Container>
-        <div className="flex flex-col justify-center">
-          <div className="text-xl text-center text-gray-700 dark:text-white">
-            Trusted by <span className="text-indigo-600">2000+</span>{" "}
-            customers worldwide
+        <div className="flex flex-col justify-center py-10">
+          <div className="text-2xl font-semibold text-center text-gray-800 dark:text-white">
+            Technologies Used
           </div>
 
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <AmazonLogo />
+          <div className="flex flex-wrap items-center justify-center gap-8 mt-10">
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=docker"
+                alt="Docker"
+                className="w-14 h-14"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Docker
+              </span>
             </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <VerizonLogo />
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=githubactions"
+                alt="GitHub Actions"
+                className="w-14 h-14"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                GitHub Actions
+              </span>
             </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <MicrosoftLogo />
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=kubernetes"
+                alt="Kubernetes"
+                className="w-14 h-14"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Kubernetes
+              </span>
             </div>
-            <div className="pt-1 text-gray-400 dark:text-gray-400">
-              <NetflixLogo />
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=aws"
+                alt="AWS"
+                className="w-14 h-14"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                AWS
+              </span>
             </div>
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <SonyLogo />
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=nextjs"
+                alt="Next.js"
+                className="w-14 h-14 bg-white rounded-full p-1"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Next.js
+              </span>
             </div>
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=tailwind"
+                alt="Tailwind CSS"
+                className="w-14 h-14"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Tailwind
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <img
+                src="https://skillicons.dev/icons?i=nginx"
+                alt="Nginx"
+                className="w-14 h-14"
+              />
+              <span className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Nginx
+              </span>
+            </div>
+
           </div>
         </div>
       </Container>
