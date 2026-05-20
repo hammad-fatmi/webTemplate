@@ -2,7 +2,7 @@ name: Deploy Next.js to EC2
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
@@ -12,16 +12,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to EC2
+      - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
+
           script: |
+            set -e
+
+            echo "🔄 Moving to project directory"
             cd ~/poto/webTemplate
+
+            echo "📥 Pulling latest code"
             git pull origin main
-            docker stop next-app || true
-            docker rm next-app || true
-            docker build -t next-app .
-            docker run -d -p 80:3000 --name next-app next-app
+
+            echo "🧹 Stopping old container (if exists)"
+            docker stop my-app || true
+            docker rm my-app || true
+
+            echo "🧱 Building Docker image (clean build)"
+            docker build --no-cache -t my-app .
+
+            echo "🚀 Running new container on port 80"
+            docker run -d -p 80:3000 --name my-app my-app
+
+            echo "✅ Deployment successful"
